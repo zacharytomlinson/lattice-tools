@@ -1,0 +1,13 @@
+[package]
+name = "lattice-peer"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false
+description = "Linux client for an ordinary USB-attached Lattice peer"
+repository = "https://github.com/zacharytomlinson/lattice-tools"
+
+[dependencies]
+lattice-peer-wire.workspace = true
+libc = "0.2"
+sha2 = "0.10"

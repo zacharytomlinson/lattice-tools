@@ -1,0 +1,7 @@
+[workspace]
+members = ["peer", "maintenance"]
+resolver = "2"
+
+[workspace.dependencies]
+lattice-peer = { path = "peer" }
+lattice-peer-wire = { git = "ssh://git@github.com/zacharytomlinson/lattice-vertex.git", rev = "8b57885ac83353fb416c157dcd5ea108b1dcc5ad", features = ["host"] }

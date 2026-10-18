@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="lattice-session" content="SESSION_TOKEN"><title>Lattice · Maintenance</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main>
+<header><a class="brand" href="/" aria-label="Lattice maintenance"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M7 9h22L18 28ZM7 9l11 9 11-9M18 18v10"/><circle cx="7" cy="9" r="3"/><circle cx="29" cy="9" r="3"/><circle cx="18" cy="28" r="3"/></svg>LATTICE</a><span class="local">LOCAL MAINTENANCE</span></header>
+<section class="intro"><p class="eyebrow">YOUR NETWORK, IN REACH</p><h1>Firmware updates,<br>vertex by vertex.</h1><p class="lede">Connect a radio, find your vertex, and send its firmware.<br>The vertex takes care of the update.</p></section>
+<div class="workspace">
+<section class="panel network"><div class="section-title"><div><span class="step">01</span><h2>Select a vertex</h2></div><button id="discover" class="quiet">Discover</button></div><p id="radio" class="meta">Waiting for discovery</p><div id="vertices" class="vertices"><div class="empty">Your reachable vertices will appear here.</div></div><p id="discovery-note" class="note"></p></section>
+<section class="panel package"><div class="section-title"><div><span class="step">02</span><h2>Choose a release</h2></div><span id="target" class="badge">No vertex selected</span></div>
+<label id="drop" class="drop" tabindex="0" for="file"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 30V9m-8 8 8-8 8 8M10 29v10h28V29"/></svg><strong id="filename">Drop firmware here</strong><span id="file-detail">or browse for a .lvup package</span><input id="file" type="file" accept=".lvup" hidden></label>
+<dl id="package-info" hidden><div><dt>Release</dt><dd id="release">—</dd></div><div><dt>Platform</dt><dd id="platform">—</dd></div><div><dt>Image size</dt><dd id="size">—</dd></div></dl>
+<p class="note">Use the complete release for this appliance. The receiving vertex checks its signature and compatibility.</p>
+<button id="send" class="primary" disabled>Send update <span aria-hidden="true">↗</span></button>
+</section></div>
+<section id="progress-panel" class="panel progress-panel" aria-live="polite"><div class="progress-heading"><span id="stage">Ready when you are</span><span id="percent"></span></div><progress id="progress" value="0" max="100"></progress><p id="message">Discovery and updates use your USB radio. Your computer’s Wi-Fi settings are unchanged.</p><p id="counts" class="meta"></p></section>
+<footer><span>A window into Lattice.</span><span id="connection">Connecting to the local application…</span></footer>
+</main></body></html>
